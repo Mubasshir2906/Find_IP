@@ -1,7 +1,13 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   
+}
+.App{
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
 }
 
 .landpage{
@@ -12,23 +18,56 @@
   width: 100%;
 }
 
-.page_title{
-  margin: 25px auto;
+.nav-container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 80%;
+  background-color: rgb(101, 21, 148);
+  height: 8vh;
+}
+
+.nav-list{
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  color: white;
+}
+
+.nav-item{
+  display: inline;
+  /*margin:10px;*/
+  width: 120px;
+  height: 50px;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1.5rem;
+  background-color: rgb(48, 12, 82);
+  color: white;
+  text-decoration: none;
 }
 
 .search_container{
+  width: 80%;
+  height: 30vh;
+  flex: 1 0 100%;
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
+  flex-wrap:nowrap;
   align-items: center;
+  margin-top: 0px;
   padding: 20px 10px;
-  width: 70%;
   background-color: blueviolet;
 }
 .search-box{
-  flex: 1;
+  
   width: 70%;
-  margin: 30px;
+  margin: 30px auto 10px auto;
   padding: 15px;
   /* border: rgb(112, 234, 255) 5px solid; */
   font-size: 30px;
@@ -63,9 +102,8 @@
 }
 .result_section{
   background-color: rgb(172, 172, 255);
-  height: 500px;
-  width: 70%;
-  padding: 30px;
+  height: 70vh;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -76,7 +114,9 @@
 .result_table{
   padding: 30px 30px;
   background-color: rgb(189, 138, 255);
-  width: 90%;
+  width: 100%;
+  margin-top: 5vh;
+  border-radius: 10px;
 }
 
 .result_row{
@@ -99,4 +139,57 @@ td{
   color: white;
 }
 
+.new-form{
+  
+  padding: 20px 0;
+  width: 80%;
+  background-color: blueviolet;
+  
+}
 
+.new-form-list{
+  flex: 1;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 250px;
+}
+
+.form-input{
+  background-color: rgb(172, 172, 255);
+  flex: 1 1 auto;
+  border: none;
+  height: 40px;
+  font-size: 1.2rem;
+  border-radius: 0.7rem;
+  padding: 5px 5px;
+  width: 70%;
+  color: rgb(15, 0, 39);
+}
+
+.new-ip-comment{
+  flex: 4 3 auto;
+}
+
+.form-input:focus{
+  border: none;
+  outline: solid 2px white;
+}
+
+.new-form-button{
+  margin-bottom: 10px;
+  width: 150px;
+  height: 50px;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1.5rem;
+  background-color: rgb(48, 12, 82);
+  color: white;
+}
+
+.new-form-button:hover{
+  background-color: rgb(71, 21, 117);
+  transition:ease-in-out;
+  transition-timing-function: 0.5s ;
+}

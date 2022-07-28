@@ -1,13 +1,19 @@
-
-
+import { useState, useContext,useEffect } from 'react'
+import './../App.css'
 import React from 'react'
+import {ResultContext} from './../ResultContext'
 
 function Result() {
+  const [resultEntries, setResultEntries] = useState([])
+  const resultContext = useContext(ResultContext);
+
+  useEffect(()=>{
+    setResultEntries(resultContext.result);
+  },[resultContext.result]);
+
   return (
-    <div>
         <div className='result_section'>
-        <h1 colspan='3'>Here results will be shown</h1>
-          <table className='result_table'>
+        <table className='result_table'>
             <thead className='result_head_container'>
 
               <tr className='result_row'>
@@ -22,7 +28,6 @@ function Result() {
             </tbody>
           </table>
         </div>
-    </div>
   )
 }
 
